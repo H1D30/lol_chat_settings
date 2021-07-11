@@ -9,7 +9,7 @@ void enable_firewall() {
 }
 
 void add_rule() {
-	system("netsh advfirewall firewall add rule name=\"LoL Chat OFF\" dir=out action=block protocol=TCP remoteport=5223");
+	system("netsh advfirewall firewall add rule name=\"LoL Chat OFF\" dir=out remoteip=172.65.212.1 protocol=TCP action=block");
 	printf("Done.\n");
 }
 
